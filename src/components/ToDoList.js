@@ -1,18 +1,15 @@
 import React from 'react'
 import ToDoItem from './ToDoItem'
 
-export default function ToDoList({ todos }) {
+export default function ToDoList({ data }) {
     return (
         <div>
             <p>ToDoList</p>
             <div>
                 {
-                    todos.map(row =>
-                    <ToDoItem key={row.id} {...row}
-                    />)
+                data.map(elem =><ToDoItem key={elem.id} {...elem}/>)
                 }
             </div>
-
         </div>
     )
 }

@@ -4,17 +4,18 @@ import ToDoList from "./ToDoList";
 import { data } from "./data/todo";
 import Counter from "./Counter";
 import User from "./User";
-import UsersList from "./UsersList";
+
+import List from "./List";
 
 function App() {
-  const todos = data;
+  
 
   return (
     <div>
       <ToDoForm />
-      <ToDoList todos={todos} />
-      {/*<Counter />*/}
-      <UsersList />
+      <ToDoList data={data} />
+   
+      <List />
     </div>
   );
   
