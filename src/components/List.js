@@ -5,12 +5,16 @@ export default function List() {
     const data = [
         {
             id: 1,
-            title: 'point 1'
+            title: 'learn JS'
         },
         {
             id: 2,
-            title: 'point 2'
-        }
+            title: 'learn React'
+        },
+        {
+            id: 3,
+            title: 'learn JSX'
+        },
     ];
 
     const [list, setList] = useState(data);
@@ -31,6 +35,7 @@ export default function List() {
         event.preventDefault();
         const { title } = event.target;
         create(title.value);
+        title.value = '';
     };
 
     return (

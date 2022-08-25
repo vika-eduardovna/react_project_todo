@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function ToDoItem(props) {
-    const { id, title, done } = props;
+export default function ToDoItem({ id, title, done, del, change_done }) {
     const style = {
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
@@ -11,7 +10,10 @@ export default function ToDoItem(props) {
         backgroundColor: done ? "#2ecc71" : "#bdc3c7"
     }
     return (
-        <div style={style}>
+        <div style={style} 
+            onDoubleClick={() => del(id)} 
+            
+            onClick={() => change_done(id)}>
             <p> id: {id}</p>
             <p> title: {title}</p>
             <p> done: {done}</p>
